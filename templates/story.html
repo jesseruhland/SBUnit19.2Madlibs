@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,4 +10,16 @@
     <h1>Your Story</h1>
     <p>{{complete_story}}</p>
   </body>
-</html>
+</html> -->
+
+{% extends 'base.html' %}
+<!--  -->
+{% block title %} Your Story {% endblock %}
+<!--  -->
+{% block page_h1 %}
+<h1>Your Story</h1>
+{% endblock %}
+<!--  -->
+{% block content %}
+<p>{{complete_story}}</p>
+{% endblock %}

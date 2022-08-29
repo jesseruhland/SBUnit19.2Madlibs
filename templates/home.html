@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,4 +18,26 @@
       </form>
     </div>
   </body>
-</html>
+</html> -->
+
+{% extends 'base.html' %}
+<!--  -->
+{% block title %} Madlibs Home {% endblock %}
+<!--  -->
+{% block page_h1 %}
+<h1>Madlibs</h1>
+{% endblock %}
+<!--  -->
+{% block content %}
+<div>
+  <form action="/selected_story">
+    <label for="stories">Choose your story:</label>
+    <select name="story">
+      {% for story in story_list %}
+      <option value="{{story}}">{{story}}</option>
+      {% endfor %}
+    </select>
+    <button type="Submit">Submit</button>
+  </form>
+</div>
+{% endblock %}

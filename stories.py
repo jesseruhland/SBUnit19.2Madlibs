@@ -43,3 +43,10 @@ story = Story(
     """Once upon a time in a long-ago {place}, there lived a
        large {adjective} {noun}. It loved to {verb} {plural_noun}."""
 )
+
+story2 = Story(["adjective1", "noun", "adjective2", "place"], """Star Wars is a {adjective1} {noun} of {adjective2} versus evil in a {place} far far away.""")
+
+story_list = {
+    "Story 1" : story,
+    "Story 2, Star Wars" : story2,
+}

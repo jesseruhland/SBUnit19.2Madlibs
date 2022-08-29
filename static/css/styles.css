@@ -1,0 +1,19 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: blue;
+}
+
+form {
+  padding: 10px;
+  margin: 10px;
+}
+
+button {
+  background-color: blue;
+  color: white;
+}
