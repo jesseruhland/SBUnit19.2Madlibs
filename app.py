@@ -6,10 +6,12 @@ app.config['SECRET_KEY'] = "randomkey"
 
 @app.route("/")
 def display_home():
+    """Display the home page with the story dropdown menu"""
     return render_template("home.html", story_list=story_list)
 
 @app.route("/selected_story")
 def display_story():
+    """Display the prompts for the chosen story in a form"""
     chosen_story = story_list[f"{request.args['story']}"]
     story_name = request.args['story']
     story_words = chosen_story.prompts 
@@ -18,6 +20,7 @@ def display_story():
 
 @app.route("/story")
 def completed_story():
+    """Display the completed story with the input from the prompt form"""
     chosen_story = story_list[f"{request.args['story']}"]
     story_words = request.args
     complete_story = chosen_story.generate(story_words)
